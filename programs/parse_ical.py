@@ -1,4 +1,3 @@
-#Needs https://github.com/collective/icalendar
 from icalendar import Calendar
 import datetime
 from datetime import timedelta

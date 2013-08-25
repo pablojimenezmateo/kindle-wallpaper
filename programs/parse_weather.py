@@ -22,10 +22,6 @@ image = today.getAttribute('code')
 date = today.getAttribute('date')
 image_url = 'icons/' + image + '.svg'
 
-#
-# Preprocess SVG
-#
-
 # Open SVG to process
 output = codecs.open('icons/template.svg', 'r', encoding='utf-8').read()
 
