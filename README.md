@@ -9,6 +9,8 @@ and Google calendar!
 
 You can see a preview in the preview.png file
 
+Based on the idea of Matthew Petroff: http://www.mpetroff.net/archives/2012/09/14/kindle-weather-display/
+
 Dependencies
 ------------
 
