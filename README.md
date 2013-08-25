@@ -24,11 +24,11 @@ and enabled the "screensavers" folder (http://www.gadget-reviews.me/2012/02/how-
 Setup
 -------------
 
-** programs/parse_ical **
+**programs/parse_ical**
 
 To get your .ical for parse_ical go to https://support.google.com/calendar/answer/37103?hl=en and follow the instructions
 
-** programs/parse_weather **
+**programs/parse_weather**
 
 To get your city code for parse_weather go to http://weather.yahoo.com/, search your city and get the last numbers.
 
