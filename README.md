@@ -3,6 +3,8 @@ Kindle weather and calendar displayer
 
 Author: Pablo Jiménez Mateo
 
+![ScreenShot](https://raw.github.com/gef3233/kindle-wallpaper/master/with_kindle.JPG)
+
 Do you use a Kindle and hope that the wallpapers could be more useful? Well, that has just changed,
 with this program you will display the weather and some task to do retrieved from Yahoo Weather
 and Google calendar!
