@@ -27,20 +27,20 @@ Setup
 **In the Kindle**
 
 - Move the file kindle/launch.sh to /mnt/us/launch.sh and add rights
-
+```bash
     scp launch.sh root@192.168.15.244:/mnt/us/
 
     chmod 755 /mnt/us/launch.sh
-
+```
 - Mount the partition in Read/Write
-
+```bash
     mntroot rw
-
+```
 - Edit the crontab file and append your job
- 
+```bash
     vi /etc/crontab/root 
     50 6 * * * /mnt/us/launch.sh
-
+```
 **programs/parse_ical**
 
 You need to open the file programs/parse_ical and put your .ical URL in the variable ICAL_URL
