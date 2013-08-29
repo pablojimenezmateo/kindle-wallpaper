@@ -34,7 +34,7 @@ for component in cal.walk('vevent'):
 			all_day_events.append(component)
 
 #Sort by date
-normal_events.sort()
+normal_events.sort(key=lambda hour: hour['DTSTART'].dt)
 
 # Finnish svg
 output = codecs.open('after-weather.svg', 'r', encoding='utf-8').read()
