@@ -45,6 +45,7 @@ Setup
     vi /etc/crontab/root 
     50 6 * * * /mnt/us/launch.sh
 ```
+
 ### In the server
 
 You must edit the following files:
