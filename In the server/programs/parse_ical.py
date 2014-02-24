@@ -25,13 +25,14 @@ for component in cal.walk('vevent'):
 
 	#Check if it is today
 	if( date_start.timetuple().tm_yday == datetime.datetime. now().timetuple().tm_yday ):
+		if date_start.timetuple().tm_year == datetime.datetime.now().timetuple().tm_year:
 
-		#Check if is not  all day (It does have time so datetime works)
-		if ( type(date_start) is datetime.datetime ):
-			
-			normal_events.append(component)
-		else:
-			all_day_events.append(component)
+			#Check if is not  all day (It does have time so datetime works)
+			if ( type(date_start) is datetime.datetime ):
+				
+				normal_events.append(component)
+			else:
+				all_day_events.append(component)
 
 #Sort by date
 normal_events.sort(key=lambda hour: hour['DTSTART'].dt)
