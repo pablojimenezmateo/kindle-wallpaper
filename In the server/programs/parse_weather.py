@@ -26,8 +26,6 @@ date = date.today().strftime("%d %b %Y")
 # Get the correct icon
 image_path = 'icons/' + str(image) + light + '.svg'
 
-print(image_path)
-
 # Open SVG to process
 output = codecs.open('icons/template.svg', 'r', encoding='utf-8').read()
 
@@ -37,13 +35,11 @@ f.readline()
 icon = f.readline()
 f.close()
 
-print("AA",icon)
-
 # Insert icons and temperatures
 output = output.replace('TODAY',date)
 output = output.replace('ICON_ONE', icon)
-output = output.replace('HIGH_ONE',str(high))
-output = output.replace('LOW_ONE',str(low))
+output = output.replace('HIGH_ONE',"{:2.1f}".format(high))
+output = output.replace('LOW_ONE',"{:2.1f}".format(low))
 
 # Write output
 codecs.open('after-weather.svg', 'w', encoding='utf-8').write(output)

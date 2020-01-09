@@ -4,14 +4,14 @@
   <title>Weather</title>
   <g font-family="DejaVu Sans" id="weather">
    <text font-size="35px" y="52.25606" x="150.03906" text-anchor="middle" id="svg_2">TODAY</text>
-   <text font-size="35px" y="121.70689" x="446.26932" text-anchor="middle" id="svg_3">Máxima:</text>
+   <text font-size="35px" y="121.70689" x="446.26932" text-anchor="middle" id="svg_3">Max:</text>
    <text font-size="100px" y="209.20592" x="526.72095" text-anchor="end" id="svg_6">HIGH_ONE</text>
    <text font-size="64px" y="182.48717" x="548.30981" text-anchor="middle" id="svg_7">°C</text>
-   <text font-size="35px" y="275.13895" x="440.80057" text-anchor="middle" id="svg_8">Mínima:</text>
+   <text font-size="35px" y="275.13895" x="440.80057" text-anchor="middle" id="svg_8">Min:</text>
    <text font-size="100px" y="359.8533" x="526.23267" text-anchor="end" id="svg_9">LOW_ONE</text>
    <text font-size="64px" y="333.13455" x="548.30981" text-anchor="middle" id="svg_10">°C</text>
   </g>
-  <text fill="black" font-size="32px" y="465.16922" x="102.92969" text-anchor="middle" id="svg_4">Tareas:</text>
+  <text fill="black" font-size="32px" y="465.16922" x="102.92969" text-anchor="middle" id="svg_4">Tasks:</text>
   <path d="m329,470.350006l0,321.500031l3,0l0,-321.500031l-3,0z" id="svg_5" fill="black"/>
   <text xml:space="preserve" text-anchor="middle" font-family="null" font-size="17" id="svg_1" y="529" x="100" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="black" font-weight="bold">hour0</text>
   <text id="svg_11" xml:space="preserve" text-anchor="middle" font-family="null" font-size="17" y="579" x="100" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="black" font-weight="bold">hour1</text>
