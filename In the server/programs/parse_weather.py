@@ -1,32 +1,32 @@
-import urllib2
-from xml.dom import minidom
-import datetime
+import urllib.request, json 
+from datetime import date
 import codecs
 
+# API key, don't abuse it or get your on in https://openweathermap.org
+API_KEY = "3d17566eeb85d89b6782df5f81b420d7"
 
-#Code of my city, if you don't know what to do here, read the README
-CODE = ""
-weather_xml = urllib2.urlopen('http://weather.yahooapis.com/forecastrss?w=' + CODE + '&u=c').read()
-dom = minidom.parseString(weather_xml)
+# Code of my city, if you don't know what to do here, read the README
+CODE = "6356995"
 
-#Get weather Tags
-xml_temperatures = dom.getElementsByTagName('yweather:forecast')
+# Read the JSON
+with urllib.request.urlopen("http://api.openweathermap.org/data/2.5/weather?id=" + CODE + "&appid=" + API_KEY + "&units=metric") as url:
+    data = json.loads(url.read().decode())
 
-#Get today Tag
-today = xml_temperatures[0]
+# Get API info
+low   = data["main"]["temp_min"]
+high  = data["main"]["temp_max"]
+image = data["weather"][0]["id"]
 
-#Get info
-low = today.getAttribute('low')
-high = today.getAttribute('high')
-image = today.getAttribute('code')
-date = today.getAttribute('date')
-image_url = 'icons/' + image + '.svg'
+# Extra info
+date = date.today().strftime("%d %b %Y")
+
+# Get the correct icon
+image_path = 'icons/' + image + '.svg'
 
 # Open SVG to process
 output = codecs.open('icons/template.svg', 'r', encoding='utf-8').read()
 
-
-#Read icon (Just the path line)
+# Read icon (Just the path line)
 f = codecs.open(image_url ,'r', encoding='utf-8')
 f.readline()
 icon = f.readline()

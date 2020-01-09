@@ -19,7 +19,7 @@ Dependencies
 Note that you need a server for this, a Raspberry Pi is more than enough
 
 You should have previously Jailbreaked you kindle (http://www.shatteredhaven.com/2012/11/1337365-ssh-on-kindle-4-usbnetwork-hack.html)
-and enabled the "screensavers" folder (http://www.gadget-reviews.me/2012/02/how-to-custom-screensavers-on-amazon.html)
+and enabled the "screensavers" folder (https://wiki.mobileread.com/wiki/Kindle_Screen_Saver_Hack_for_all_2.x,_3.x_%26_4.x_Kindles)
 
 - https://github.com/collective/icalendar
 - librsvg2-bin 
@@ -60,11 +60,20 @@ To get your .ical for parse_ical go to https://support.google.com/calendar/answe
 
 You need to open the file programs/parse_weather and put your city code in the variable CODE
 
-To get your city code for parse_weather go to http://weather.yahoo.com/, search your city and get the last numbers.
+To get your city code for parse_weather download http://bulk.openweathermap.org/sample/city.list.json.gz, search your city id.
 
-As an example my city code would be 756804
+As an example my city code would be 6356995
 
-http://weather.yahoo.com/spain/valencia/castello-de-la-plana-756804/
+```
+  {
+    "id": 6356995,
+    "name": "Castellón de la Plana/Castelló de la Plana",
+    "country": "ES",
+    "coord": {
+      "lon": -0.05768,
+      "lat": 39.992901
+    }
+```
 
 **launch.sh**
 
