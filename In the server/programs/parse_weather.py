@@ -24,22 +24,26 @@ light = data["weather"][0]["icon"][-1:]
 date = date.today().strftime("%d %b %Y")
 
 # Get the correct icon
-image_path = 'icons/' + image + '.svg'
+image_path = 'icons/' + str(image) + light + '.svg'
+
+print(image_path)
 
 # Open SVG to process
 output = codecs.open('icons/template.svg', 'r', encoding='utf-8').read()
 
 # Read icon (Just the path line)
-f = codecs.open(image_url ,'r', encoding='utf-8')
+f = codecs.open(image_path ,'r', encoding='utf-8')
 f.readline()
 icon = f.readline()
 f.close()
 
+print("AA",icon)
+
 # Insert icons and temperatures
 output = output.replace('TODAY',date)
-output = output.replace('ICON_ONE',icon)
-output = output.replace('HIGH_ONE',high)
-output = output.replace('LOW_ONE',low)
+output = output.replace('ICON_ONE', icon)
+output = output.replace('HIGH_ONE',str(high))
+output = output.replace('LOW_ONE',str(low))
 
 # Write output
 codecs.open('after-weather.svg', 'w', encoding='utf-8').write(output)
