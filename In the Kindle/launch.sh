@@ -1,5 +1,5 @@
 #! /bin/sh
 
-rm /mnt/us/screensaver/done.png
-wget -O "/mnt/us/screensaver/done.png" "http://path to your server/kindle/done.png"
-reboot
+rm /linkss/screensavers/done.png
+wget -O "/linkss/screensavers/done.png" "http://path to your server/kindle/done.png"
+touch /linkss/screensavers/reboot
