@@ -17,6 +17,9 @@ low   = data["main"]["temp_min"]
 high  = data["main"]["temp_max"]
 image = data["weather"][0]["id"]
 
+# This tells if it is night "n" or day "d"
+light = data["weather"][0]["icon"][-1:]
+
 # Extra info
 date = date.today().strftime("%d %b %Y")
 
