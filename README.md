@@ -93,5 +93,9 @@ Append the cronjob some minutes before the one in the Kindle:
     30 6 * * * /path/to/launch.sh
 ```
 
+#### Special thanks
+
+kevinabraun@gmail.com for the remaining weather icons.
+
 This program is licensed under Creative commons Attribution 3.0 Unported, more info : 
 http://creativecommons.org/licenses/by/3.0/deed.en_US
