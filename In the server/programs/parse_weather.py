@@ -5,9 +5,8 @@ import codecs
 # API key, don't abuse it or get your on in https://openweathermap.org
 API_KEY = "3d17566eeb85d89b6782df5f81b420d7"
 
-# Code of my city, if you don't know what to do here, read the README
-# change this code by the one of your city
-CODE = "6356995"
+# Code of your city, if you don't know what to do here, read the README
+CODE = ""
 
 # Read the JSON
 with urllib.request.urlopen("http://api.openweathermap.org/data/2.5/weather?id=" + CODE + "&appid=" + API_KEY + "&units=metric") as url:

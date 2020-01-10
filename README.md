@@ -6,7 +6,7 @@ Author: Pablo Jiménez Mateo
 ![ScreenShot](https://raw.github.com/gef3233/kindle-wallpaper/master/with_kindle.JPG)
 
 Do you use a Kindle and hope that the wallpapers could be more useful? Well, that has just changed,
-with this program you will display the weather and some task to do retrieved from Yahoo Weather
+with this program you will display the weather and some task to do retrieved from Open Weather
 and Google calendar!
 
 You can see a preview in the preview.png file
@@ -16,7 +16,7 @@ Based on the idea of Matthew Petroff: http://www.mpetroff.net/archives/2012/09/1
 Dependencies
 ------------
 
-Note that you need a server for this, a Raspberry Pi is more than enough
+Note that you need a server for this, a Raspberry Pi is more than enough.
 
 You should have previously Jailbreaked you kindle (http://www.shatteredhaven.com/2012/11/1337365-ssh-on-kindle-4-usbnetwork-hack.html)
 and enabled the "screensavers" folder (https://wiki.mobileread.com/wiki/Kindle_Screen_Saver_Hack_for_all_2.x,_3.x_%26_4.x_Kindles)
@@ -25,12 +25,20 @@ and enabled the "screensavers" folder (https://wiki.mobileread.com/wiki/Kindle_S
 - librsvg2-bin 
 - pngcrush
 
+You can install the dependencies with the following 2 commands:
+
+```bash
+sudo apt install pngcrush librsvg2-bin python3-pip
+pip install icalendar
+
+```
+
 Setup
 -------------
 
 ### In the Kindle
 
-- Move the file kindle/launch.sh to /mnt/us/launch.sh and add rights
+- Move the file kindle/launch.sh to /mnt/us/launch.sh and change its permissions:
 ```bash
     scp launch.sh root@192.168.15.244:/mnt/us/
 
@@ -40,7 +48,7 @@ Setup
 ```bash
     mntroot rw
 ```
-- Edit the crontab file and append your job
+- Edit the crontab file and append your job (this will make it run everyday at 6:50 AM)
 ```bash
     vi /etc/crontab/root 
     50 6 * * * /mnt/us/launch.sh
@@ -58,11 +66,11 @@ To get your .ical for parse_ical go to https://support.google.com/calendar/answe
 
 **programs/parse_weather**
 
-You need to open the file programs/parse_weather and put your city code in the variable CODE
+You need to open the file programs/parse_weather and put your city code in the variable CODE.
 
-To get your city code for parse_weather download http://bulk.openweathermap.org/sample/city.list.json.gz, search your city id.
+To get your city code for parse_weather download http://bulk.openweathermap.org/sample/city.list.json.gz and search your city id.
 
-As an example my city code would be 6356995
+As an example my city code would be 6356995:
 
 ```
   {
@@ -95,7 +103,7 @@ Give the script launch permissions:
     chmod 755 launch.sh
 ```
 
-Append the cronjob some minutes before the one in the Kindle:
+Append the cronjob some minutes before the one in the Kindle (this will execute everydat at 6:30 AM):
 
 ```bash
     crontab -e 
