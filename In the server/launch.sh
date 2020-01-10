@@ -2,8 +2,8 @@
 
 cd "$(dirname "$0")"
 
-python programs/parse_weather.py
-python programs/parse_ical.py
+python3 programs/parse_weather.py
+python3 programs/parse_ical.py
 
 rsvg-convert --background-color=white -o almost_done.png almost_done.svg
 
