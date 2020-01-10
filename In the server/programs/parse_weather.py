@@ -6,6 +6,7 @@ import codecs
 API_KEY = "3d17566eeb85d89b6782df5f81b420d7"
 
 # Code of my city, if you don't know what to do here, read the README
+# change this code by the one of your city
 CODE = "6356995"
 
 # Read the JSON

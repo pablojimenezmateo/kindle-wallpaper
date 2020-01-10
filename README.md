@@ -54,7 +54,7 @@ You must edit the following files:
 
 You need to open the file programs/parse_ical and put your .ical URL in the variable ICAL_URL
 
-To get your .ical for parse_ical go to https://support.google.com/calendar/answer/37103?hl=en and follow the instructions
+To get your .ical for parse_ical go to https://support.google.com/calendar/answer/37103?hl=en and follow the instructions, you need the URL that is under "Public address in iCal format" and make that calendar public, or the link won't work.
 
 **programs/parse_weather**
 

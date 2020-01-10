@@ -1,15 +1,14 @@
 from icalendar import Calendar
 import datetime
 from datetime import timedelta
-import urllib
+import urllib.request
 import time
 import codecs
 
 #Your private ical URL, if you don't know what to do here, read the README
 ICAL_URL = ""
 
-urllib.urlretrieve (ICAL_URL, "basic.ics")
-
+urllib.request.urlretrieve(ICAL_URL, "basic.ics")
 
 cal = Calendar.from_ical(open('basic.ics','rb').read())
 
@@ -19,9 +18,9 @@ normal_events = []
 for component in cal.walk('vevent'):
 
     #Because of timezone
-        delta = timedelta(hours = 3)
+    delta = timedelta(hours = 3)
 
-        date_start = component['DTSTART'].dt + delta
+    date_start = component['DTSTART'].dt + delta
 
     #Check if it is today
     if( date_start.timetuple().tm_yday == datetime.datetime. now().timetuple().tm_yday ):
@@ -44,7 +43,7 @@ count = 0
 
 for event in normal_events:
 
-        date_start = event['DTSTART'].dt + delta
+    date_start = event['DTSTART'].dt + delta
 
     date_end = event['DTEND'].dt + delta
 
