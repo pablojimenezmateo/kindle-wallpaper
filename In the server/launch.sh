@@ -8,7 +8,7 @@ python3 programs/parse_ical.py
 rsvg-convert --background-color=white -o almost_done.png almost_done.svg
 
 #We optimize the image
-pngcrush -c 0 -ow almost_done.png done.png
+pngcrush -force -c 0 almost_done.png done.png
 
 #We move the image where it needs to be
 rm /var/www/kindle/done.png
