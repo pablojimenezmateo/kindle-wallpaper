@@ -62,7 +62,14 @@ You must edit the following files:
 
 You need to open the file programs/parse_ical and put your .ical URL in the variable ICAL_URL
 
+Google calendar<br>
 To get your .ical for parse_ical go to https://support.google.com/calendar/answer/37103?hl=en and follow the instructions, you need the URL that is under "Public address in iCal format" and make that calendar public, or the link won't work.
+
+iCloud calendar<br>
+The same is also possible with iCloud. Just enable sharing throgh the fan symbol and tick "public" to see the webcal URL. You can either use the easier accessible public URL explained here at apple support https://support.apple.com/en-gb/guide/icloud/mm6b1a9479/icloud or try and get the secret private URL through this tutorial https://www.techrepublic.com/article/how-to-find-your-icloud-calendar-url/
+In any case you will need to replace prefix "webcal://" with "https://"
+
+Should you experience a timezone offset when displaying calendar entry times, you will need to adapt the timedelta variable as well. So far, time delta needs to be set to the GMT offset with Google calendar (CET = GMT+1 = 1) and to 0 with iCloud. 
 
 **programs/parse_weather**
 
