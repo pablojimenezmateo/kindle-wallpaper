@@ -17,7 +17,7 @@ normal_events = []
 
 for component in cal.walk('vevent'):
 
-    #Because of timezone
+    #Offset from GMT timezone depending on Calendar provider (hours = x)
     delta = timedelta(hours = 3)
 
     date_start = component['DTSTART'].dt + delta
