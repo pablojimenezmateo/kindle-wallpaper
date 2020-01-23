@@ -30,10 +30,17 @@ image_path = 'icons/' + str(image) + light + '.svg'
 output = codecs.open('icons/template.svg', 'r', encoding='utf-8').read()
 
 # Read icon (Just the path line)
-f = codecs.open(image_path ,'r', encoding='utf-8')
-f.readline()
-icon = f.readline()
-f.close()
+if os.path.exists(image_path):
+    f = codecs.open(image_path, 'r', encoding='utf-8')
+    f.readline()
+    icon = f.readline()
+    print(image_path)
+    f.close()
+else: # Error handling
+    f = codecs.open('icons/error.svg', 'r', encoding='utf-8')
+    f.readline()
+    icon = f.readline()
+    f.close()
 
 # Insert icons and temperatures
 output = output.replace('TODAY',date)
