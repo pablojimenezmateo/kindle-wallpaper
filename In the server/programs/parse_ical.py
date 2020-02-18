@@ -66,6 +66,11 @@ for event in all_day_events:
 
     entry_name = event['SUMMARY']
 
+    # Escape special characters for rsvg-convert
+    entry_name.replace("&", "&amp;")
+    entry_name.replace("<", "&lt;")
+    entry_name.replace(">", "&gt;")
+
     output = output.replace('AllDay' + str(count) , entry_name)
 
     if (count == 2 ):
