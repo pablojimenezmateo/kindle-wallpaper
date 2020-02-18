@@ -50,6 +50,10 @@ for event in normal_events:
     entry_date = date_start.strftime("%H:%M") + '-' +  date_end.strftime("%H:%M") 
     entry_name = event['SUMMARY'] 
 
+    # Escape special characters for rsvg-convert
+    entry_name.replace("&", "&amp;")
+    entry_name.replace("<", "&lt;")
+    entry_name.replace(">", "&gt;")
 
     output = output.replace('hour'+ str(count) ,entry_date)
     output = output.replace('Name' + str(count) ,entry_name)
