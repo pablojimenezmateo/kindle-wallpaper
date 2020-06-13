@@ -29,7 +29,7 @@ You can install the dependencies with the following 2 commands:
 
 ```bash
 sudo apt install pngcrush librsvg2-bin python3-pip
-pip install icalendar
+python3 -m pip install icalendar
 
 ```
 
