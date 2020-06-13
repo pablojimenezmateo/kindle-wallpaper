@@ -1,6 +1,7 @@
 import urllib.request, json 
 from datetime import date
 import codecs
+import os
 
 # API key, don't abuse it or get your on in https://openweathermap.org
 API_KEY = "3d17566eeb85d89b6782df5f81b420d7"
