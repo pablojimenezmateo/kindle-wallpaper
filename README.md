@@ -21,7 +21,7 @@ Based on the idea of Matthew Petroff: http://www.mpetroff.net/archives/2012/09/1
 Prerequisites
 ------------
 
-- Webserver
+- Webserver<br>
 You will need a simple (static) webserver with Python 3 installed. An easy way to run this is any Raspberry Pi with a fixed IP.
 Alternatively it can be run in any other environment like a Docker container or VM.
 This container runs the latest Ubuntu server with Apache 2 httpd and Python 3 as well as the below dependencies.
