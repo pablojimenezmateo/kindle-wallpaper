@@ -70,7 +70,7 @@ Setup
     50 6 * * * /mnt/us/launch.sh
 ```
 
-### In the server
+### In the server (script directory)
 
 You must edit the following files:
 
