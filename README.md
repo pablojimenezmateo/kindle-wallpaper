@@ -18,12 +18,23 @@ You can see a preview in the preview.png file
 
 Based on the idea of Matthew Petroff: http://www.mpetroff.net/archives/2012/09/14/kindle-weather-display/
 
+Prerequisites
+------------
+
+- Webserver
+You will need a simple (static) webserver with Python 3 installed. An easy way to run this is any Raspberry Pi with a fixed IP.
+Alternatively it can be run in any other environment like a Docker container or VM.
+This container runs the latest Ubuntu server with Apache 2 httpd and Python 3 as well as the below dependencies.
+The script and http directory (webroot) are defined as bind points (pointed to host directory at deployment). The container has unattended security upgrades enabled.
+
+
+- Amazon Kindle that can be jailbroken
+
+
 Dependencies
 ------------
 
-Note that you need a server for this, a Raspberry Pi is more than enough.
-
-You should have previously Jailbreaked you kindle (http://www.shatteredhaven.com/2012/11/1337365-ssh-on-kindle-4-usbnetwork-hack.html)
+You should have previously Jailbroken your kindle (http://www.shatteredhaven.com/2012/11/1337365-ssh-on-kindle-4-usbnetwork-hack.html)
 and enabled the "screensavers" folder (https://wiki.mobileread.com/wiki/Kindle_Screen_Saver_Hack_for_all_2.x,_3.x_%26_4.x_Kindles)
 
 - https://github.com/collective/icalendar
