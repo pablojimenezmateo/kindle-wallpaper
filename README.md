@@ -3,6 +3,11 @@ Kindle weather and calendar displayer
 
 Author: Pablo Jiménez Mateo
 
+Addition by luedi0:
+Bugfix: All day events trunkated to one
+Addition of docker container for (server) wallpaper generation.
+
+
 ![ScreenShot](https://raw.github.com/gef3233/kindle-wallpaper/master/with_kindle.JPG)
 
 Do you use a Kindle and hope that the wallpapers could be more useful? Well, that has just changed,
