@@ -59,7 +59,7 @@ for event in normal_events:
     output = output.replace('Name' + str(count) ,entry_name)
 
     count+=1
-    #limit regular events to 5
+    # Limit display of regular events to 5
     if (count == 5):
 
         break
@@ -78,7 +78,7 @@ for event in all_day_events:
     output = output.replace('AllDay' + str(count) , entry_name)
 
     count+=1
-    #limit all day events to 2
+    # Limit display of all day events to 2
     if (count == 2 ):
         
         break
