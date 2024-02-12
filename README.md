@@ -3,8 +3,8 @@ Kindle weather and calendar displayer
 
 Author: Pablo Jiménez Mateo
 
-Addition by luedi0:
-Bugfix: All day events trunkated to one
+Addition by luedi0:<br>
+Bugfix: All day events trunkated to one<br>
 Addition of docker container for (server) wallpaper generation.
 
 
