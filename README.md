@@ -69,6 +69,7 @@ Setup
     vi /etc/crontab/root 
     50 6 * * * /mnt/us/launch.sh
 ```
+A good website to create cron schedules: https://crontab.guru/
 
 ### In the server (script directory)
 
