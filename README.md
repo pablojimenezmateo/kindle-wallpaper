@@ -23,10 +23,11 @@ Prerequisites
 
 - Webserver<br>
 You will need a simple (static) webserver with Python 3 installed. An easy way to run this is any Raspberry Pi with a fixed IP.
-Alternatively it can be run in any other environment like a Docker container or VM.
+Alternatively it can be run in any other environment like a Docker container or VM.<br>
+<br>
+https://hub.docker.com/r/luedi0/apache2-python3
 This container runs the latest Ubuntu server with Apache 2 httpd and Python 3 as well as the below dependencies.
 The script and http directory (webroot) are defined as bind points (pointed to host directory at deployment). The container has unattended security upgrades enabled.
-https://hub.docker.com/r/luedi0/apache2-python3
 
 
 - Amazon Kindle that can be jailbroken
